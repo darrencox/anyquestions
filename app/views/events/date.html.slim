@@ -1,0 +1,23 @@
+.body-content
+  .row
+    .cell-8
+      = form_for @event do |f|
+        .field-no 01
+        .field-label Event Date
+        .field-discription
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla provident cum modi pariatur, eius reiciendis eligendi id odit, soluta.
+        = f.text_field :date
+        .field-space
+        .field-no 02
+        .field-label Event Time
+        .field-discription
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla provident cum modi pariatur, eius reiciendis eligendi id odit, soluta.
+        = f.text_field :starts
+        .field-space
+        .field-no 03
+        .field-label Event Finishes
+        .field-discription
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla provident cum modi pariatur, eius reiciendis eligendi id odit, soluta.
+
+        = f.text_field :ends, placholder: "Finishes"
+        = f.submit 'next', class: 'btn pull-right'

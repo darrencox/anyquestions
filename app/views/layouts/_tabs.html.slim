@@ -1,0 +1,14 @@
+.tabs
+  - if action_name == 'index'
+    = link_to events_path do
+      .tab.selected Library
+    = link_to new_event_path do
+      .tab New Event
+
+  - if ['new', 'date', 'preview'].include? action_name
+
+    = link_to new_event_path do 
+      .tab class="#{action_name == 'new' ? 'selected' : ''}" Info
+    = link_to date_events_path do 
+      .tab class="#{action_name == 'date' ? 'selected' : ''}" Date
+    .tab Cover Image

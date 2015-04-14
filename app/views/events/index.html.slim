@@ -1,0 +1,44 @@
+.row
+  .cell-8
+    .content
+      .list-actions
+        = link_to new_event_path do
+          .btn.circle.icon.blue &#xf011;
+        .btn.circle.icon &#xf04f;
+        .btn.circle.icon &#xf030;
+        .btn.circle.icon &#xf0d0;
+
+      - @events.each do |event|
+        = link_to event_info_event_path(event), remote: true do
+          .table-row
+            .cell-3
+              .indicator.blue
+              input type='checkbox' style='margin-right:10px'
+              .bold = event.name
+            .cell-7.pad-left
+              = event.subtitle
+            .cell-2.pad-left
+              .date = event.created_at.strftime("%b %-d, %Y")
+  .cell-4
+    .actions
+      .header
+        | Edit Event Info
+        .btn.circle.icon.pull-right#clear &#xf081;
+        .btn.circle.icon.pull-right#save &#xf076;
+      .content
+        #event-info
+
+javascript:
+  $('.table-row').click(function(){
+    $('.table-row').removeClass('selected');
+    $(this).addClass('selected');
+    $('#clear').addClass('blue');
+    $('#save').addClass('green');
+  })
+
+  $('#clear').click(function(){
+    $('.table-row').removeClass('selected');
+    $(this).removeClass('blue');
+    $('#save').removeClass('green');
+    $('#event-info').empty();
+  })

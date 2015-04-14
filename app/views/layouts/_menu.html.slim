@@ -1,0 +1,13 @@
+.menu
+  .logo
+    = image_tag 'logo.png', style:'width:50px'
+  = link_to destroy_user_session_path, method: :delete do
+    .btn.pill Log Out
+  .new-event
+  = link_to events_path do
+    .item.selected Events
+  = link_to edit_user_registration_path do
+    .item Account
+  .divider
+  .category
+    h5 Labels

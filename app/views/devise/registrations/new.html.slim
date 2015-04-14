@@ -1,0 +1,21 @@
+.registration
+  .background
+  .form
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .cell-12
+        label Full Name
+      .cell-12
+        = text_field_tag :name, nil, autofocus: true, placeholder: 'John Smith'
+      .cell-12
+        label Email
+      .cell-12
+        = f.email_field :email, placeholder: 'example@questions.com'
+      .cell-12
+        label Password
+      .cell-12
+        = f.password_field :password, autocomplete: "off", placeholder: '••••••••'
+      .cell-12
+        = f.submit "Sign up it's free", class: 'btn'
+
+/ <%= render "users/shared/links" %>

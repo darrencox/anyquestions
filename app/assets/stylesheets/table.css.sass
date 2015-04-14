@@ -1,0 +1,28 @@
+@import "colors"
+@import "attributes"
+
+.table-row
+  width: 100%
+  height: 48px
+  padding: 0 30px
+  line-height: 48px
+  background-color: $white
+  border-bottom: 1px solid $border
+  box-sizing: border-box
+  font-size: 13px
+  color: #4f5c63
+
+  .bold
+    color: #283339
+    font-weight: 700
+    display: inline-block
+
+  .date
+    text-align: right
+
+.table-row.selected
+  background-color: $grey
+
+.table-row:hover
+  cursor: pointer
+  background-color: $grey

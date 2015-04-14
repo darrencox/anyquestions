@@ -1,0 +1,17 @@
+= form_for @event do |f|
+  h5 Event Name
+  = f.text_field :name
+
+  h5 Event Date
+  = f.text_field :date
+
+  h5 Event Summary
+  = f.text_area :summary
+  h5 Event Subtitle
+  = f.text_area :subtitle
+  = f.submit 'submit', id: 'submit', style:'display:none'
+
+javascript:
+  $('#save').click(function(){
+    $('#submit').trigger('click');
+  })

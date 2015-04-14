@@ -1,0 +1,90 @@
+@import "colors"
+
+.nav
+  width: 100%
+  height: 80px
+  padding: 0 30px
+  background-color: $white
+  color: #4f5357
+  border-top: 1px solid $border
+  border-bottom: 1px solid $border
+  box-sizing: border-box
+
+  .item
+    width: auto
+    height: 50px
+    line-height: 50px
+    display: inline-block
+
+  .btn.pill
+    height: 30px
+    line-height: 30px
+    margin: 24px 0 0 0
+    float: right
+
+.tabs
+  width: 100%
+  height: 50px
+  background-color: $grey
+
+  .tab
+    width: auto
+    height: 50px
+    line-height: 50px
+    padding: 0 35px
+    background-color: $grey
+    display: inline-block
+    float: left
+    border-right: 1px solid $border
+
+  .tab.selected
+    background-color: $white
+    border-bottom: 1px solid white
+
+.menu
+  width: 260px
+  height: 100vh
+  float: left
+  display: inline-block
+  background-color: $navy
+  color: $white
+
+  .logo
+    width: 100%
+    height: 129px
+
+  .new-event
+    width: 100%
+    height: 70px
+    text-align: center
+
+    .btn
+      font-size: 12px
+      padding: 0 40px
+      font-weight: 700
+      border-width: 2px
+      border-radius: 22px
+
+  .item,
+  .category
+    width: 100%
+    height: 48px
+    padding: 0 0 0 50px
+    line-height: 48px
+    font-size: 14px
+    color: #a5b1c4
+    box-sizing: border-box
+
+  .category
+
+    h5
+      font-weight: 700
+
+  .divider
+    width: 80%
+    height: 1px
+    margin: 20px auto
+    background-color: $navy-light
+
+  .item.selected
+    background-color: $navy-light
