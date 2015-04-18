@@ -114,6 +114,21 @@
       line-height: 20px
       margin-right: 15px
 
+// preload bg images
+
+.landing:before
+  content: image-url("hero2.jpg")
+  width: 0
+  height: 0
+  display: none
+
+.landing:after
+  content: image-url("hero3.jpg")
+  width: 0
+  height: 0
+  display: none
+
+
 @media screen and (min-width : 1500px)
 
   .landing
