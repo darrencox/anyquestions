@@ -1,76 +1,124 @@
 @import "colors"
 
 .landing
-
-  .background
+  
+  .container
+    width: 1080px
+    margin: 0 auto
+  
+  .hero
     width: 100%
-    height: 100vh
-    position: absolute
-    top: 0
-    background-color: #272c37
+    height: 700px
+    position: relative
+    color: $white
 
-    &:before
-      content: ""
+    .landing-content
       width: 100%
-      height: 100%
-      position: absolute
-      background-image: image-url('bg2.jpg')
-      background-size: cover
-      background-repeat: no-repeat
-      background-position: right top
-      opacity: 0.15
+      height: auto
+      margin-top: 150px
+      position: relative
 
-  .nav
+      .btn.pill
+        height: 42px
+        padding: 0 45px
+        line-height: 42px
+
+      .btn.pill.border
+        border-width: 2px
+        border-color: $white
+        color: $white
+        line-height: 38px
+        margin-right: 20px
+
+      .btn.pill.border:hover
+        background-color: rgba(255,255,255,0.2)
+
+      h1
+        font-weight: 300
+
+  .hero:before
+    content: ""
     width: 100%
-    height: 70px
-    padding: 0 70px
+    height: 100%
+    position: absolute
+    opacity: 0.3
+    background-color: #222222
+
+  .hero.bg1,
+  .hero.bg2,
+  .hero.bg3
+    background-image: image-url('hero1.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: left top
+    transition: background-image 1s ease-in-out
+    -webkit-transition: background-image 1s ease-in-out
+    -moz-transition: background-image 1s ease-in-out
+    -o-transition: background-image 1s ease-in-out
+    
+  .hero.bg2
+    background-image: image-url('hero2.jpg')
+
+  .hero.bg3
+    background-image: image-url('hero3.jpg')
+
+  .landing-nav
+    width: 100%
+    height: 100px
+    padding: 0
+    border: 0
     position: relative
     box-sizing: border-box
     background-color: transparent
     vertical-align: top
 
     .logo
-      width: 45px
-      height: 45px
+      width: 200px
+      height: 100px
       margin-top: 12px
       display: inline-block
 
     .item
       width: auto
-      height: 70px
-      line-height: 70px
+      height: 100px
+      line-height: 100px
       display: inline-block
       float: right
       color: $white
       text-transform: uppercase
       font-size: 14px
-      margin-left: 30px
+      margin-left: 20px
 
-  .hero
-    color: $white
-    width: 550px
-    position: absolute
-    bottom: 100px
+      .btn.pill.border
+        border-color: $white
+        color: $white
+        line-height: 28px
 
-    h1
-      margin: 0 !important
-      font-weight: 200
-      font-size: 36px
-
-    p
-      margin: 15px 0 20px 0 !important
-      font-weight: 100
+      .btn.pill,
+      .btn.flat
+        height: 30px
+        line-height: 30px
+        margin: 35px 0
 
   .footer
     width: 100%
-    height: 70px
-    // background-color: rgba(255,255,255,0.3)
-    // #323942
-    position: absolute
-    bottom: 0px
+    height: auto
+    padding: 70px 0
 
-    .right
-      width: 500px
-      height: 100%
-      background-color: #4a535d
-      float: right
+    .social-icon
+      width: 20px
+      height: 20px
+      display: inline-block
+      font-family: 'entypo-social'
+      font-size: 45px
+      line-height: 20px
+      margin-right: 15px
+
+@media screen and (min-width : 1500px)
+
+  .landing
+    .hero
+      height: 750px
+
+      .landing-content
+        margin-top: 150px

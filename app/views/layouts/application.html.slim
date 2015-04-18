@@ -2,13 +2,9 @@ doctype html
 html
   head
     title Any Questions
-    = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-
-    link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,100,400,300' rel='stylesheet' type='text/css'
-
-    link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'
 
   body
     - if current_user

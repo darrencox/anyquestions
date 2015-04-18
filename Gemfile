@@ -1,9 +1,12 @@
+ruby '2.2.1'
 source 'https://rubygems.org'
+
+# Server
+gem 'unicorn'
 
 gem 'rails', '4.2.0'
 gem 'devise'
 gem 'pg'
-gem 'annotate'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -18,18 +21,24 @@ gem 'carrierwave'
 # Pry
 gem 'pry-rails'
 gem 'pry-nav'
+gem 'pry-awesome_print'
 
-gem 'awesome_print'
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+group :development do
   gem 'spring'
-  gem 'dotenv-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'annotate'
 end
 
+group :development, :test do
+  gem 'thin'
+  gem 'dotenv-rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'web-console', '~> 2.0'
+  gem 'factory_girl_rails'
+  gem 'byebug'
+  gem 'database_cleaner'
+  gem 'quiet_assets'
+end
