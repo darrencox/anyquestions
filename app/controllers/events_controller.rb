@@ -4,6 +4,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order(created_at: :desc)
+    @today = Time.now.day
   end
 
   def new
@@ -23,7 +24,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(permitted_params)
     @event.save
-    redirect_to date_event_path(@event)
+    redirect_to events_path
   end
 
   def update
